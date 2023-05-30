@@ -23,3 +23,8 @@ The model has been trained on the gray images, which produce, colored images in 
   
 4. The dataset used in the training can be taken from here
 https://drive.google.com/drive/folders/1HavKWvLc9k7df5jM5uLHiYCEvvnep9Y3 
+  
+  
+# Inference
+  python inference.py --model_path <str> --image_path <str>
+ 
