@@ -12,6 +12,8 @@ This is a PatchGAN model.
 
 ### Training
 Use the following script to train this model
+
+
 python train.py --epochs <int> --save_interval <int>
 
 ### Training Details
