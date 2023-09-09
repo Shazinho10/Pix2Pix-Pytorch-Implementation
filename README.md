@@ -1,32 +1,26 @@
 
-# Pix2Pix From scratch with Pytorch
+## Pix-to-Pix Model Implementation (From Scratch)
 
-In this implementation, the famous Pix2Pix paper from Berkley AI Reseach (BAIR) has been implemented using Pytorch
+This instantiation involves the utilization of the renowned Pix2Pix paper from Berkeley AI Research (BAIR), implemented through the PyTorch framework.
+## Training Details
+This model has undergone training using grayscale input images, generating corresponding colorized output images. It is essential to evaluate the model's performance on a broader spectrum of image data.
 
-# Generator
-The generator here is UNet architechture
+* Throughout the training process, random samples have been preserved and stored in the "output" directory for further analysis and assessment.
 
-# Discriminator
-This is a PatchGAN model.
+* The model's trained weights are systematically saved in the "checkpoints" directory, based on a specified save interval, ensuring that the model's progress is effectively recorded.
 
+* Input images for this model are sourced from the "data/train/train_A" directory, while the corresponding target images are located in the "data/train/train_B" directory. The primary objective here is to execute image translation, converting images from the "train_A" set to their corresponding representations in the "train_B" set.
 
-### Training
-Use the following script to train this model
+## Training
 
+After putting the data as described above, do the following
 
-python train.py --epochs <int> --save_interval <int>
+```bash
+  python train.py --epochs --save_interval
+```
 
-### Training Details
-The model has been trained on the gray images, which produce, colored images in return. But this model should be tested on other images as well.
+## Inference
 
-1. During the training random samples are saved in the "output" directory.
-2. The weights will be saved in the checkpoints directory depending upon the save_interval
-3. The input images will be in the "data/train/train_A" directory while the target images will be in the "data/train/train_B" directory. Here the goal is to translate the images from A ---> B (train_A --> train_B)
-  
-4. The dataset used in the training can be taken from here
-https://drive.google.com/drive/folders/1HavKWvLc9k7df5jM5uLHiYCEvvnep9Y3 
-  
-  
-# Inference
-  python inference.py --model_path <str> --image_path <str>
- 
+```bash
+  python inference.py --model_path --image_path
+```
