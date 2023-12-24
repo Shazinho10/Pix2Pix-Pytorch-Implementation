@@ -1,7 +1,7 @@
 
 ## Pix-to-Pix Model Implementation (From Scratch)
 
-This instantiation involves the utilization of the renowned Pix2Pix paper from Berkeley AI Research (BAIR), implemented through the PyTorch framework.
+This instantiation involves the utilization of the renowned Pix2Pix paper from Berkeley AI Research (BAIR) (https://arxiv.org/abs/1611.07004), implemented through the PyTorch framework.
 ## Training Details
 This model has undergone training using grayscale input images, generating corresponding colorized output images. It is essential to evaluate the model's performance on a broader spectrum of image data.
 
